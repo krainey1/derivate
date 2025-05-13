@@ -24,6 +24,7 @@ def genCon():
     - A question in the exact format: "d/dx (expression)?" where expression is random expression - pick a random number for the constant between 1 and 1000
     - Three answer choices (A-C), only one correct - ensure each choice is unique.
     - Clearly indicate the correct answer letter. Assign the correct answer to one of the three letter choices.
+    -ensure there is no trailing comma inside the choices array after the last element 
 
     Return it as JSON like:
     {
@@ -34,7 +35,7 @@ def genCon():
     
     """
     response = client.chat.completions.create(
-        model="gpt-4",
+        model="gpt-3.5-turbo",
         messages=[{"role": "user", "content": prompt}],
         temperature=0.9 #controls randomness
     )
@@ -49,6 +50,7 @@ def gentore():
     - A question in the exact format: "d/dx (expression)?" where expression is one of: sin(x), cos(x), tan(x), csc(x), sec(x), cot(x), e^x, ln(x) 
     - Three answer choices (A-C), only one correct - ensure each choice is unique.
     - Clearly indicate the correct answer letter. Assign the correct answer to one of the three letter choices.
+    -ensure there is no trailing comma inside the choices array after the last element 
 
     Return it as JSON like:
     {
@@ -59,7 +61,7 @@ def gentore():
     
     """
     response = client.chat.completions.create(
-        model="gpt-4",
+        model="gpt-3.5-turbo",
         messages=[{"role": "user", "content": prompt}],
         temperature=0.9 #controls randomness
     )
@@ -75,6 +77,7 @@ def genPow():
     Pick a power between (0 AND 100) and base between (1 and 500)
     - Three answer choices (A-C), only one correct - ensure each choice is unique.
     - Clearly indicate the correct answer letter. Assign the correct answer to one of the three letter choices.
+    -ensure there is no trailing comma inside the choices array after the last element 
 
     Return it as JSON like:
     {
@@ -85,7 +88,7 @@ def genPow():
     
     """
     response = client.chat.completions.create(
-        model="gpt-4",
+        model="gpt-3.5-turbo",
         messages=[{"role": "user", "content": prompt}],
         temperature=1.0 #controls randomness
     )

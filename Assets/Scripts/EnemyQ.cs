@@ -98,21 +98,21 @@ public class EnemyQ : MonoBehaviour
             Debug.Log("Incorrect answer.");
             //penalty
             float curr = p.getcurrhealth();
-            p.setcurrhealth(curr -= 5);
+            p.setcurrhealth(curr -= 5, 1);
             StartCoroutine(FlashRed(p.GetComponent<SpriteRenderer>(), 0.2f));
         }
     }
 
     IEnumerator Die()
     {
-        p.setcurrhealth(100); //give them their health back 
+        p.setcurrhealth(100, 0); //give them their health back 
         foreach (var btn in answerButtons)
             btn.interactable = false;
         
         Destroy(gameObject); //destroy the enemy
         yield break;
     }
-
+    //show damage
     public IEnumerator FlashRed(SpriteRenderer sr, float duration)
     {
         sr.color = new Color(1f, 0.4f, 0.4f); // red

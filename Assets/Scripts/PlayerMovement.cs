@@ -1,6 +1,8 @@
 
 using UnityEditor;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.Rendering;
 //credit where credit is due I got most of this from a brackeys tutorial
 public class PlayerMovement : MonoBehaviour
 {
@@ -33,8 +35,12 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    public void setcurrhealth(float health)
+    public void setcurrhealth(float health, int choice)
     {
+        SpriteRenderer s = GetComponent<SpriteRenderer>();
+        if(choice == 1){
+            StartCoroutine(FlashRed(s, 0.2f));
+        }
         currentHealth = health;
     }
 
@@ -52,5 +58,12 @@ public class PlayerMovement : MonoBehaviour
     private void OnCollisionStay2D(Collision2D collision) 
     {
         rb.linearVelocity = Vector2.zero;
+    }
+
+    public IEnumerator FlashRed(SpriteRenderer sr, float duration)
+    {
+        sr.color = new Color(1f, 0.4f, 0.4f); // red
+        yield return new WaitForSeconds(duration);
+        sr.color = Color.white; // reset 
     }
 }
