@@ -98,7 +98,6 @@ public class EnemyQ : MonoBehaviour
             //penalty
             float curr = p.getcurrhealth();
             p.setcurrhealth(curr -= 5, 1);
-            StartCoroutine(FlashRed(p.GetComponent<SpriteRenderer>(), 0.2f));
         }
     }
 
@@ -110,13 +109,6 @@ public class EnemyQ : MonoBehaviour
         
         Destroy(gameObject); //destroy the enemy
         yield break;
-    }
-    //show damage
-    public IEnumerator FlashRed(SpriteRenderer sr, float duration)
-    {
-        sr.color = new Color(1f, 0.4f, 0.4f); // red
-        yield return new WaitForSeconds(duration);
-        sr.color = Color.white; // reset 
     }
 }
 
