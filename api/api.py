@@ -35,7 +35,7 @@ def genCon():
     
     """
     response = client.chat.completions.create(
-        model="gpt-3.5-turbo",
+        model="gpt-4",
         messages=[{"role": "user", "content": prompt}],
         temperature=0.9 #controls randomness
     )
@@ -61,7 +61,7 @@ def gentore():
     
     """
     response = client.chat.completions.create(
-        model="gpt-3.5-turbo",
+        model="gpt-4",
         messages=[{"role": "user", "content": prompt}],
         temperature=0.9 #controls randomness
     )
@@ -88,7 +88,7 @@ def genPow():
     
     """
     response = client.chat.completions.create(
-        model="gpt-3.5-turbo",
+        model="gpt-4",
         messages=[{"role": "user", "content": prompt}],
         temperature=1.0 #controls randomness
     )
