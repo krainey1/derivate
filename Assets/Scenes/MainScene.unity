@@ -3048,7 +3048,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 146.29999, y: -17.300003}
+  m_AnchoredPosition: {x: 223.6, y: -46.5}
   m_SizeDelta: {x: 219.54492, y: 31.58319}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1183277005
@@ -41541,7 +41541,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 985b09ab10a90d14b9e3d6f674f154c3, type: 3}
   m_Resource: {fileID: 8300000, guid: 985b09ab10a90d14b9e3d6f674f154c3, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.163
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -42469,9 +42469,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 765397961}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 106.20001, y: 236.7}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 171.5, y: -61.800003}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1786024988
@@ -58370,7 +58370,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 167074686095722065, guid: 05fc9355969968f48b3cbebab80a334e, type: 3}
       propertyPath: m_text
-      value: If it is the treasure of Pythagor you seek,  unite the Borrowmean rings
+      value: If it is the treasure of Pythagor you seek,  unite the Borromean rings
         to unveil what is within these doors
       objectReference: {fileID: 0}
     - target: {fileID: 167074686095722065, guid: 05fc9355969968f48b3cbebab80a334e, type: 3}

@@ -3,6 +3,7 @@ using UnityEditor;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 //credit where credit is due I got most of this from a brackeys tutorial
 public class PlayerMovement : MonoBehaviour
 {
@@ -27,6 +28,10 @@ public class PlayerMovement : MonoBehaviour
     {
         //Input
         health.SetHealth(currentHealth); //keep updating the bar as we ago along
+        if(currentHealth <= 0)
+        {
+            SceneManager.LoadScene("DeathScreen");
+        }
         movement.x = Input.GetAxisRaw("Horizontal"); //left arrow -1 rightarrow 1 or as
         movement.y = Input.GetAxisRaw("Vertical");
         animator.SetFloat("Horizontal", movement.x);

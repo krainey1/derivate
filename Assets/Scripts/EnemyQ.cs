@@ -3,7 +3,6 @@ using UnityEngine.UI;
 using UnityEngine.Networking;
 using TMPro;
 using System.Collections;
-using Unity.PlasticSCM.Editor.WebApi;
 
 public class EnemyQ : MonoBehaviour
 {
