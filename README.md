@@ -18,4 +18,5 @@ Then the game can be run in the unity editor or a build. (OpenAI is used to gene
 /Packages - the package lock 
 
 Note: This was a project for CSE 489 Educational Games 
+Another note: some of player stuff (.anim and controller) is in the /brackeys foler in Assets (the brackeys assets were some free to use stuff that I mostly didn't end up using) 
 
